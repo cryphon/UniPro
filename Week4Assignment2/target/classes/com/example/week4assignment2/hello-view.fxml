@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane hgap="25" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" vgap="25" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.week4assignment2.UIController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="NEVER" minWidth="200.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+
+    <children>
+        <!--Days rented-->
+        <Label text="Number of days rented:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="daysRented" GridPane.columnIndex="1" GridPane.rowIndex="0">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin></TextField>
+
+        <!--Kilometers Driven-->
+        <Label text="Number of kilometers driven:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="kmDriven" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin></TextField>
+
+        <!--Fuel tank-->
+        <CheckBox fx:id="FuelTankStatus" text="Fuel tank not full when returned" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+
+        <!--N of Liters-->
+        <Label text="Number of liters:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="nLiters" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <!--Action button -->
+        <Button onAction="#onCalculateButtonClick" text="Calculate payment" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+        <!--Amount Due-->
+        <Label text="Amount due:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <Label fx:id="AmountDue" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    </children>
+
+    <GridPane.margin>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+    </GridPane.margin>
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="50.0" />
+   </padding>
+</GridPane>
